@@ -1603,7 +1603,7 @@ test_performance1617 %>%
 
 # for RF trained after MINREM 
 
-test_performance <- test_performance_MAP_KNN %>% 
+test_performance <- test_performance_MAP_RF %>% 
   # squared error ² berekenen
   mutate(afwijking = sqrt((gemiddelde_woningwaarde_35 - y_pred_MINREM_rf)^2),
          wijken_en_buurten_label = str_trim(wijken_en_buurten_label))
